@@ -20,6 +20,7 @@ public class Student {
     private Long id;
     private String name;
     private LocalDate dob;
+    @Transient
     private Integer age;
     private String email;
 
@@ -27,18 +28,16 @@ public class Student {
     }
 
     //    Without ID
-    public Student(String name, LocalDate dob, Integer age, String email) {
+    public Student(String name, LocalDate dob, String email) {
         this.name = name;
         this.dob = dob;
-        this.age = age;
         this.email = email;
     }
 
-    public Student(Long id, String name, LocalDate dob, Integer age, String email) {
+    public Student(Long id, String name, LocalDate dob, String email) {
         this.id = id;
         this.name = name;
         this.dob = dob;
-        this.age = age;
         this.email = email;
     }
 
